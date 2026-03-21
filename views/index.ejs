@@ -10,11 +10,18 @@
     <h1>Quora Posts</h1>
     <% for(post of posts){ %>
         <div class="post">
-        <h2 class="user"> @ <%= post.username %></h2>
-        <p class="content"><%= post.content %></p>
+            <h2 class="user"> @ <%= post.username %></h2>
+            <p class="content"><%= post.content %></p>
+            
+            <a href="/posts/<%=post.id%>">See in Detail</a>
+            <a href="/posts/<%=post.id%>/edit">Edit</a>
         </div>
     
     <%}%>
+
+    <br>
+    <br>
+    <br>
     <!-- <a href="/posts/new">Add New Post</a> -->
     <button onclick='/posts/new'>Add New Post</button>
 </body>
