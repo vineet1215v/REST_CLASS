@@ -15,6 +15,10 @@
             
             <a href="/posts/<%=post.id%>">See in Detail</a>
             <a href="/posts/<%=post.id%>/edit">Edit</a>
+            <form action="/posts/<%= post.id %>?_method=DELETE" method="post">
+                <button>Delete Post</button>
+            </form>
+            
         </div>
     
     <%}%>
@@ -23,6 +27,6 @@
     <br>
     <br>
     <!-- <a href="/posts/new">Add New Post</a> -->
-    <button onclick='/posts/new'>Add New Post</button>
+    <button onclick="window.location.href='/posts/new'">Add New Post</button>
 </body>
 </html>         
